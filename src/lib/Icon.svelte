@@ -1,3 +1,7 @@
+<!-- This component exists to add event handler support to FontAwesomeIcon -->
+<!-- At some point this should be able to be removed -->
+<!-- https://svelte-5-preview.vercel.app/docs/event-handlers -->
+
 <script lang="ts">
 	import { FontAwesomeIcon, type FontAwesomeIconProps } from '@fortawesome/svelte-fontawesome';
 
