@@ -8,8 +8,10 @@
 
 <style>
   .app {
-    height: 100dvh;
-    width: 100dvw;
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid transparent;
 
     color: var(--color-text);
     background-color: var(--color-background-primary);
