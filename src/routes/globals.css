@@ -1,9 +1,9 @@
 :root {
-  --color-text: #212529;
+  --color-text: #f7f7f7;
 
-  --color-background-primary: hsl(0, 0%, 61%);
-  --color-background-primary-surface: #fff;
-  --color-background-secondary: #007bff;
+  --color-background-primary: #101010;
+  --color-background-primary-surface: #212120;
+  --color-background-secondary: #212120;
 
   --color-accent: #ffc107;
 
@@ -17,6 +17,8 @@
   --spacing-small: calc(1 * var(--spacing-unit));
   --spacing-medium: calc(2 * var(--spacing-unit));
   --spacing-large: calc(3 * var(--spacing-unit));
+
+  --icon-size: 1.75rem;
 }
 
 html, body {
