@@ -7,18 +7,13 @@
 
 <div class="side-panel" class:visible={isOpen}>
 	<div class="side-panel__content">
-		<!-- <header class="side-panel__header">
-			<h1>Here is a header</h1>
-		</header> -->
-		<div class="side-panel__container">
-			<p>here is some content</p>
-		</div>
+		<p>here is some content</p>
 	</div>
 </div>
 
 <style>
 	.side-panel {
-		display: flex; /*  */
+		display: flex; /* needed to fix margin collapse with children */
 
 		visibility: hidden;
 		transition: visibility 0s 0.6s;
@@ -61,16 +56,6 @@
 		.side-panel__content {
 			position: static;
 			width: 20vw;
-		}
-	}
-
-	.side-panel__header {
-		border-bottom: 1px solid var(--color-text);
-
-		h1 {
-			font-size: 1.5rem;
-			margin: 0;
-			padding: 1rem;
 		}
 	}
 </style>
