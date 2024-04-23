@@ -1,16 +1,15 @@
-<script>
-	import Icon from '$lib/Icon.svelte';
-	import { faTimes } from '@fortawesome/free-solid-svg-icons';
+<script lang="ts">
+	type Props = {
+		isOpen: boolean;
+	};
+	let { isOpen }: Props = $props();
 </script>
 
-<div class="side-panel visible">
+<div class="side-panel" class:visible={isOpen}>
 	<div class="side-panel__content">
-		<header class="side-panel__header">
+		<!-- <header class="side-panel__header">
 			<h1>Here is a header</h1>
-			<span class="side-panel__close">
-				<Icon icon={faTimes} style="font-size: var(--icon-size);" />
-			</span>
-		</header>
+		</header> -->
 		<div class="side-panel__container">
 			<p>here is some content</p>
 		</div>
@@ -18,17 +17,22 @@
 </div>
 
 <style>
-	.side-panel__close {
-		position: absolute;
-		top: var(--spacing-small);
-		right: var(--spacing-small);
-	}
-
 	.side-panel {
+		display: flex; /*  */
+
 		visibility: hidden;
 		transition: visibility 0s 0.6s;
 
+		height: 100%;
+
 		&.visible {
+			visibility: visible;
+			transition: visibility 0s 0s;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.side-panel {
 			visibility: visible;
 			transition: visibility 0s 0s;
 		}
@@ -50,6 +54,13 @@
 		.visible & {
 			transform: translate3d(0, 0, 0);
 			transition-delay: 0s;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.side-panel__content {
+			position: static;
+			width: 20vw;
 		}
 	}
 
